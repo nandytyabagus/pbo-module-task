@@ -1,4 +1,4 @@
-﻿class program
+class program
 {
     static void Main(string[] args)
     {
@@ -30,15 +30,24 @@
         };
 
 
-        kebunBinatang.TambahHewan(singa);
-        kebunBinatang.TambahHewan(gajah);
-        kebunBinatang.TambahHewan(ular);
-        kebunBinatang.TambahHewan(buaya);
+        //kebunBinatang.TambahHewan(singa);
+        //kebunBinatang.TambahHewan(gajah);
+        //kebunBinatang.TambahHewan(ular);
+        //kebunBinatang.TambahHewan(buaya);
 
-        kebunBinatang.DaftarHewan();
+        //kebunBinatang.DaftarHewan();
 
-        ((Singa)singa).Mengaum();
-        ((Ular)ular).Merayap();
+        //((Singa)singa).Mengaum();
+        //((Ular)ular).Merayap();
+
+        //Console.WriteLine(gajah.Suara());
+        //Console.WriteLine(ular.Suara());
+
+        //((Singa)singa).infosinga();
+
+        //Reptil reptil = new Buaya();
+        //Console.WriteLine(reptil.Suara());
+
     }
 }
 public class Hewan
@@ -84,13 +93,17 @@ public class Reptil : Hewan
 
 public class Singa : Mamalia
 {
+    public void infosinga()
+    {
+        Console.WriteLine($"Nama: {Nama}\nUmur: {Umur}\nJumlah Kaki: {JumlahKaki}");
+    }
     public void Mengaum()
     {
         Console.WriteLine("Rawrrrrr");
     }
     public override string Suara()
     {
-        return "Hewan ini Bersuara";
+        return $"Hewan {Nama}ini Bersuara";
     }
 
 }
@@ -99,7 +112,7 @@ public class Gajah : Mamalia
 {
     public override string Suara()
     {
-        return "Hewan ini Bersuara";
+        return $"Hewan {Nama} ini Bersuara";
     }
 }
 public class Ular : Reptil
@@ -110,14 +123,14 @@ public class Ular : Reptil
     }
     public override string Suara()
     {
-        return "Hewan ini Bersuara";
+        return $"Hewan {Nama} ini Bersuara";
     }
 }
 public class Buaya : Reptil
 {
     public override string Suara()
     {
-        return "Hewan ini Bersuara";
+        return $"Hewan {Nama} ini Bersuara";
     }
 }
 
